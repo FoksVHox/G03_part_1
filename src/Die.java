@@ -6,7 +6,7 @@ public class Die {
         throw new UnsupportedOperationException("not implemented yet");
     }
 
-    public void Roll(){
+    public int Roll(){
         throw new UnsupportedOperationException("not implemented yet");
     }
 }
