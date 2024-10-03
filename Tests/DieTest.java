@@ -4,7 +4,6 @@ import Tests.Utility.DistributionOfRolls;
 import org.junit.jupiter.api.Test;
 import src.Die;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class DieTest {
@@ -34,7 +33,7 @@ class DieTest {
 
 
         for (double PercentageDistribution : utilityClass.calculateDistribution()){
-            assertTrue(20<PercentageDistribution&& PercentageDistribution<30);
+            assertTrue(13<PercentageDistribution&& PercentageDistribution<19);
 
         }
 
