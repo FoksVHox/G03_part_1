@@ -1,7 +1,8 @@
 package Tests.Utility;
 
 public class DistributionOfRolls {
-    int[] AmountFaceValue = {1,2,3,4,5,6};
+
+    int[] AmountFaceValue = {0,0,0,0,0,0};
 
 
 
@@ -12,8 +13,12 @@ public class DistributionOfRolls {
     public double[] calculateDistribution(){
         double[] distribution = new double[AmountFaceValue.length];
 
+        int sum = calculateSumOfAmountFaceValue();
 
-         //TODO implement a way to return the distribution of
+        for (int i = 0; i < AmountFaceValue.length; i++) {
+            distribution[i] = AmountFaceValue[i]/sum*100;
+        }
+
 
         return distribution;
     }
@@ -21,7 +26,9 @@ public class DistributionOfRolls {
     private int calculateSumOfAmountFaceValue(){
 
         int sum = 0;
-        
-
+        for( int faceValue : AmountFaceValue ){
+            sum += faceValue;
+        }
+        return sum;
     }
 }
