@@ -8,5 +8,6 @@ class DieTest {
 
     @Test
     void roll() {
+        throw new UnsupportedOperationException("not implemented yet");
     }
 }
