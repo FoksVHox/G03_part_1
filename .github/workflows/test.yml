@@ -32,10 +32,6 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
 
-      # Change to the correct directory
-      - name: Navigate to project directory
-        run: cd G03_part_1
-
       # Test with Maven (Ensure that pom.xml exists in this directory)
       - name: Test with Maven
         run: mvn -B test --file pom.xml
