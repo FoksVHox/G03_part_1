@@ -15,7 +15,7 @@ public class GameManager {
     private void setPlayerScore(){
         throw new UnsupportedOperationException("not implemented yet");
     }
-    public String StartGame(){
+    public Player StartGame(){
         throw new UnsupportedOperationException("not implemented yet");
     }
 }
