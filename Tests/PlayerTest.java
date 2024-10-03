@@ -1,9 +1,7 @@
 package Tests;
 
 import org.junit.jupiter.api.Test;
-import src.Die;
 import src.Player;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class PlayerTest {
