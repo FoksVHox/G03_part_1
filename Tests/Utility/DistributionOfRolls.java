@@ -9,11 +9,11 @@ public class DistributionOfRolls {
     public void addValue(int FaceValue){
         AmountFaceValue[FaceValue-1]++;
     }
-    public int[] calculateDistribution(){
-        int[] distribution = new int[AmountFaceValue.length];
+    public double[] calculateDistribution(){
+        double[] distribution = new double[AmountFaceValue.length];
 
 
-         
+         //TODO implement a way to return the distribution of
 
         return distribution;
     }
