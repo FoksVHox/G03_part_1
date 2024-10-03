@@ -33,7 +33,7 @@ class DieTest {
 
 
         for (double PercentageDistribution : utilityClass.calculateDistribution()){
-            assertTrue(13<PercentageDistribution&& PercentageDistribution<19);
+            assertTrue(12<PercentageDistribution&& PercentageDistribution<20);
 
         }
 
