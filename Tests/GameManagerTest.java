@@ -29,6 +29,6 @@ class GameManagerTest {
 
     @Test
     void toWinPlayerHaveTooRollDoubleAfter40PointsToWin(){
-
+        //
     }
 }
