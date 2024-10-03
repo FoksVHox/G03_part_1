@@ -1,6 +1,5 @@
 name: Java CI with JUnit
 
-# Workflow triggers when a push is made to the main branch or a pull request is opened targeting the main branch
 on:
   push:
     branches:
@@ -24,7 +23,8 @@ jobs:
         with:
           distribution: 'oracle'
           java-version: '21'
-      # Maven
+
+      # Cache Maven packages
       - name: Cache Maven packages
         uses: actions/cache@v2
         with:
@@ -32,5 +32,10 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
 
+      # Change to the correct directory
+      - name: Navigate to project directory
+        run: cd G03_part_1
+
+      # Test with Maven (Ensure that pom.xml exists in this directory)
       - name: Test with Maven
-        run: mvn -B test --file pom.xml
+        run: mvn -B test --file G03_part_1/pom.xml
