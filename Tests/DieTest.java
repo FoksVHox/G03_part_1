@@ -38,9 +38,15 @@ class DieTest {
         }
 
     }
-
-
-
+    @Test
+    void rollTime() {
+        Die individiulDie = new Die();
+        long maxTime = 333;
+        long startTime = System.currentTimeMillis();
+        int faceValue = individiulDie.Roll();
+        long endTime = System.currentTimeMillis();
+        assertTrue(endTime-startTime < maxTime, "Time too roll die, took too long");
+    }
 
 
 }
