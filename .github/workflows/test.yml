@@ -38,4 +38,4 @@ jobs:
 
       # Test with Maven (Ensure that pom.xml exists in this directory)
       - name: Test with Maven
-        run: mvn -B test --file G03_part_1/pom.xml
+        run: mvn -B test --file pom.xml
