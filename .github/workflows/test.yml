@@ -24,11 +24,13 @@ jobs:
         with:
           distribution: 'oracle'
           java-version: '21'
+      # Maven
+      - name: Cache Maven packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
 
-      # Bygger projektet med Maven eller Gradle (afhængigt af hvad du bruger)
-      - name: Build with Maven
-        run: mvn clean install
-
-      # Kører tests ved hjælp af Maven
-      - name: Run tests
-        run: mvn test
+      - name: Test with Maven
+        run: mvn -B test --file pom.xml
