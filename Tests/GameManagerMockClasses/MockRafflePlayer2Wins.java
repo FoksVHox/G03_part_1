@@ -18,8 +18,13 @@ public class MockRafflePlayer2Wins extends Raffle {
         ListOfInputs.add(new int[]{6,6});
 
     }
-    public int[] Raffle (){
+    @Override
+    public int[] RaffleDices (){
+        if (currentIndOfListArray >= ListOfInputs.size()) {
+            throw new IllegalStateException("No more mock inputs available.");
+        }
+        int[] returnResults = ListOfInputs.get(currentIndOfListArray);
         currentIndOfListArray++;
-        return ListOfInputs.get(currentIndOfListArray);
+        return returnResults;
     }
 }

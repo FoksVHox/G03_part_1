@@ -27,8 +27,13 @@ public class MockRaffleDoubleOnes extends Raffle {
 
 
     }
-    public int[] Raffle (){
+    @Override
+    public int[] RaffleDices (){
+        if (currentIndOfListArray >= ListOfInputs.size()) {
+            throw new IllegalStateException("No more mock inputs available.");
+        }
+        int[] returnResults = ListOfInputs.get(currentIndOfListArray);
         currentIndOfListArray++;
-        return ListOfInputs.get(currentIndOfListArray);
+        return returnResults;
     }
 }
