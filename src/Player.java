@@ -7,14 +7,11 @@ public class Player {
         this.playerPosition = playerPosition;
     }
     public int GetScore(){
-        throw new UnsupportedOperationException("not implemented yet");
+        return score;
     }
 
-    public void SetPlayerPosition(int position){
-        this.playerPosition = position;
-    }
     public void SetScore(int score){
-        throw new UnsupportedOperationException("not implemented yet");
+        this.score = score;
     }
 
 }
