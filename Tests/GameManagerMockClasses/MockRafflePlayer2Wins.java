@@ -14,8 +14,10 @@ public class MockRafflePlayer2Wins extends Raffle {
 
         ListOfInputs.add(new int[]{2,1});
         ListOfInputs.add(new int[]{6,6});
-        ListOfInputs.add(new int[]{3,3});
         ListOfInputs.add(new int[]{6,6});
+        ListOfInputs.add(new int[]{2,6});
+
+
 
     }
     @Override

@@ -7,9 +7,9 @@ public class Main {
 
         GameManager currentGame = new GameManager(2,ProductionRaffle);
 
-        int PlayerWhoWon = currentGame.StartGame().playerPosition;
+        int PlayerWhoWon = currentGame.StartGame().playerPosition + 1;
 
-        System.out.println("Congrationlations, Player :"+PlayerWhoWon+" Won");
+        System.out.println("Congrationlations, Player :"+PlayerWhoWon +" Won");
 
     }
 }

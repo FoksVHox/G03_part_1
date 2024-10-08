@@ -30,7 +30,7 @@ class DieTest {
         for (int i=0;i<1000;i++ ){
             utilityClass.addValue(individiulDie.Roll());
         }
-        var distributions = utilityClass.calculateDistribution();
+        double[] distributions = utilityClass.calculateDistribution();
 
 
         for (double PercentageDistribution : distributions){
@@ -44,7 +44,7 @@ class DieTest {
         Die individiulDie = new Die();
         long maxTime = 333;
         long startTime = System.currentTimeMillis();
-        int _ = individiulDie.Roll();
+        individiulDie.Roll();
         long endTime = System.currentTimeMillis();
         assertTrue(endTime-startTime < maxTime, "Time too roll die, took too long");
     }
