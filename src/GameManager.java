@@ -17,10 +17,6 @@ public class GameManager {
 
     }
 
-    private boolean DidAPlayerWin(Player thePlayer){
-
-        return thePlayer.won();
-    }
 
     private void RollPlayer(Player thePlayer){
 
@@ -28,7 +24,7 @@ public class GameManager {
         int[] score = raffle.RaffleDices();
 
         thePlayer.SetScore(score);
-        if (DidAPlayerWin(thePlayer)){
+        if (thePlayer.won()){
             return;
         }
 
@@ -49,7 +45,7 @@ public class GameManager {
         while (true) {  // Infinite loop until a player wins
             RollPlayer(players.get(currentPlayer)); // Roll for the current player
 
-            if (DidAPlayerWin(players.get(currentPlayer))) { // Check if current player won
+            if (players.get(currentPlayer).won()) { // Check if current player won
                 return players.get(currentPlayer); // Return the winner
             }
 

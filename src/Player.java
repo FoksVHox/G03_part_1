@@ -45,8 +45,6 @@ public class Player {
 
         }
         return sum == 2;
-
-
     }
 
     public boolean won() {
