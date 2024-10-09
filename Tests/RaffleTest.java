@@ -12,7 +12,7 @@ class RaffleTest {
 
         Raffle sut = new Raffle();
 
-        int[] DieValues = sut.Raffle();
+        int[] DieValues = sut.RaffleDices();
 
         int lowerBound = 1;
         int upperBound = 6;
@@ -33,7 +33,7 @@ class RaffleTest {
 
 
         for (int i=0;i<1000;i++ ){
-            int[] DieValues = sut.Raffle();
+            int[] DieValues = sut.RaffleDices();
             utilityClass.addValue(DieValues[0]);
             utilityClass.addValue(DieValues[1]);
         }
