@@ -9,7 +9,7 @@ public class Main {
 
         int PlayerWhoWon = currentGame.StartGame().playerPosition + 1;
 
-        System.out.println("Congratulation, Player :"+PlayerWhoWon +" Won");
+        System.out.println("Congratulation, Player: "+PlayerWhoWon +" Won");
 
     }
 }
