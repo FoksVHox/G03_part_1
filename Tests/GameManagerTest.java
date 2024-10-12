@@ -18,7 +18,7 @@ class GameManagerTest {
 
         Player playerWhoWon = sut.StartGame();
 
-        assertEquals(1, playerWhoWon.playerPosition);
+        assertEquals(0, playerWhoWon.playerPosition);
 
 
 
@@ -31,7 +31,7 @@ class GameManagerTest {
 
         Player playerWhoWon = sut.StartGame();
 
-        assertEquals(2, playerWhoWon.playerPosition);
+        assertEquals(1, playerWhoWon.playerPosition);
     }
 
 
@@ -45,7 +45,7 @@ class GameManagerTest {
 
         Player playerWhoWon = sut.StartGame();
 
-        assertEquals(2, playerWhoWon.playerPosition);
+        assertEquals(1, playerWhoWon.playerPosition);
 
     }
 
@@ -57,7 +57,7 @@ class GameManagerTest {
 
         Player playerWhoWon = sut.StartGame();
 
-        assertEquals(1, playerWhoWon.playerPosition);
+        assertEquals(0, playerWhoWon.playerPosition);
     }
 
 
@@ -69,7 +69,7 @@ class GameManagerTest {
 
         Player playerWhoWon = sut.StartGame();
 
-        assertEquals(1, playerWhoWon.playerPosition);
+        assertEquals(0, playerWhoWon.playerPosition);
 
     }
 

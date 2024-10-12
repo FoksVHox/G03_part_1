@@ -1,6 +1,5 @@
 name: Java CI with JUnit
 
-# Workflow triggers when a push is made to the main branch or a pull request is opened targeting the main branch
 on:
   push:
     branches:
@@ -25,10 +24,14 @@ jobs:
           distribution: 'oracle'
           java-version: '21'
 
-      # Bygger projektet med Maven eller Gradle (afhængigt af hvad du bruger)
-      - name: Build with Maven
-        run: mvn clean install
+      # Cache Maven packages
+      - name: Cache Maven packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
 
-      # Kører tests ved hjælp af Maven
-      - name: Run tests
-        run: mvn test
+      # Test with Maven (Ensure that pom.xml exists in this directory)
+      - name: Test with Maven
+        run: mvn -B test --file pom.xml

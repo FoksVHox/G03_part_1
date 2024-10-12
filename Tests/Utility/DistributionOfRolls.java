@@ -16,7 +16,7 @@ public class DistributionOfRolls {
         int sum = calculateSumOfAmountFaceValue();
 
         for (int i = 0; i < AmountFaceValue.length; i++) {
-            distribution[i] = AmountFaceValue[i]/sum*100;
+            distribution[i] = (double) AmountFaceValue[i] /sum*100;
         }
 
 
